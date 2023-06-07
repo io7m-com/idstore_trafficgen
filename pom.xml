@@ -12,11 +12,11 @@
   </parent>
 
   <groupId>com.io7m.idstore.trafficgen</groupId>
-  <artifactId>com.io7m.idstore.trafficgen</artifactId>
+  <artifactId>com.io7m.idstore.idstore_trafficgen</artifactId>
   <version>0.0.1</version>
   <packaging>jar</packaging>
 
-  <name>com.io7m.idstore.trafficgen</name>
+  <name>com.io7m.idstore.idstore_trafficgen</name>
   <description>Idstore Traffic Generator</description>
   <url>https://www.io7m.com/software/idstore</url>
 
