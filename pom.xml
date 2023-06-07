@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.io7m.primogenitor</groupId>
+    <artifactId>com.io7m.primogenitor.full</artifactId>
+    <version>7.5.0</version>
+  </parent>
+
+  <groupId>com.io7m.idstore.trafficgen</groupId>
+  <artifactId>com.io7m.idstore.trafficgen</artifactId>
+  <version>0.0.1</version>
+  <packaging>jar</packaging>
+
+  <name>com.io7m.idstore.trafficgen</name>
+  <description>Idstore Traffic Generator</description>
+  <url>https://www.io7m.com/software/idstore</url>
+
+  <properties>
+    <com.io7m.quarrel.version>1.0.0</com.io7m.quarrel.version>
+    <com.io7m.idstore.version>1.0.0-beta0007</com.io7m.idstore.version>
+    <io7m.api.previousVersion>0.0.1</io7m.api.previousVersion>
+  </properties>
+
+  <licenses>
+    <license>
+      <name>ISC</name>
+      <url>https://io7m.com/license/isc.txt</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/io7m/idstore_trafficgen</url>
+    <connection>scm:git:https://github.com/io7m/idstore_trafficgen</connection>
+    <developerConnection>scm:git:https://github.com/io7m/idstore_trafficgen</developerConnection>
+  </scm>
+
+  <developers>
+    <developer>
+      <id>io7m</id>
+      <name>io7m</name>
+      <email>code@io7m.com</email>
+      <url>https://io7m.com</url>
+    </developer>
+  </developers>
+
+  <issueManagement>
+    <url>https://github.com/io7m/idstore_trafficgen/issues</url>
+    <system>GitHub Issues</system>
+  </issueManagement>
+
+  <distributionManagement>
+    <site>
+      <id>io7m.com</id>
+      <name>io7m.com</name>
+      <url>https://www.io7m.com/software/idstore</url>
+    </site>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <ciManagement>
+    <system>GitHub Actions</system>
+    <url>https://github.com/io7m/idstore_trafficgen/actions</url>
+  </ciManagement>
+
+  <dependencies>
+    <!-- Build metadata -->
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.annotation.bundle</artifactId>
+      <version>2.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.annotation.versioning</artifactId>
+      <version>1.1.2</version>
+    </dependency>
+
+    <!-- Idstore -->
+    <dependency>
+      <groupId>com.io7m.idstore</groupId>
+      <artifactId>com.io7m.idstore.error_codes</artifactId>
+      <version>${com.io7m.idstore.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.io7m.idstore</groupId>
+      <artifactId>com.io7m.idstore.model</artifactId>
+      <version>${com.io7m.idstore.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.io7m.idstore</groupId>
+      <artifactId>com.io7m.idstore.admin_client</artifactId>
+      <version>${com.io7m.idstore.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.io7m.idstore</groupId>
+      <artifactId>com.io7m.idstore.admin_client.api</artifactId>
+      <version>${com.io7m.idstore.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.io7m.idstore</groupId>
+      <artifactId>com.io7m.idstore.user_client</artifactId>
+      <version>${com.io7m.idstore.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.io7m.idstore</groupId>
+      <artifactId>com.io7m.idstore.user_client.api</artifactId>
+      <version>${com.io7m.idstore.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.io7m.idstore</groupId>
+      <artifactId>com.io7m.idstore.protocol.admin</artifactId>
+      <version>${com.io7m.idstore.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.io7m.idstore</groupId>
+      <artifactId>com.io7m.idstore.protocol.user</artifactId>
+      <version>${com.io7m.idstore.version}</version>
+    </dependency>
+
+    <!-- CLI -->
+    <dependency>
+      <groupId>com.io7m.quarrel</groupId>
+      <artifactId>com.io7m.quarrel.core</artifactId>
+      <version>${com.io7m.quarrel.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.io7m.quarrel</groupId>
+      <artifactId>com.io7m.quarrel.ext.logback</artifactId>
+      <version>${com.io7m.quarrel.version}</version>
+    </dependency>
+
+    <!-- Logging -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.7</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.4.7</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <configuration>
+            <suppressionsLocation>checkstyle-filter.xml</suppressionsLocation>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>com.io7m.stmp</groupId>
+          <artifactId>string-template-maven-plugin</artifactId>
+          <version>1.2.0</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>jaxb2-maven-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <!-- Generate version information. -->
+      <plugin>
+        <groupId>com.io7m.stmp</groupId>
+        <artifactId>string-template-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>generate-version</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>render</goal>
+            </goals>
+            <configuration>
+              <templates>
+                <template>
+                  <directory>src/main/string-template</directory>
+                  <name>IdTGVersion</name>
+                  <target>
+                    ${project.build.directory}/generated-sources/string-template/com/io7m/idstore/trafficgen/IdTGVersion.java
+                  </target>
+                  <properties>
+                    <appVersion>${project.version}</appVersion>
+                    <appBuild>${buildNumber}</appBuild>
+                  </properties>
+                </template>
+              </templates>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- Ignore dependencies that bytecode analysis misses. -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <configuration>
+          <failOnWarning>true</failOnWarning>
+          <ignoredUnusedDeclaredDependencies>
+            <ignoredUnusedDeclaredDependency>ch.qos.logback:logback-classic:*</ignoredUnusedDeclaredDependency>
+          </ignoredUnusedDeclaredDependencies>
+        </configuration>
+      </plugin>
+
+      <!-- Generate a site -->
+      <plugin>
+        <groupId>com.io7m.minisite</groupId>
+        <artifactId>com.io7m.minisite.maven_plugin</artifactId>
+        <inherited>false</inherited>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
