@@ -21,7 +21,7 @@
   <url>https://www.io7m.com/software/idstore</url>
 
   <properties>
-    <com.io7m.idstore.version>1.0.0</com.io7m.idstore.version>
+    <com.io7m.idstore.version>1.2.1</com.io7m.idstore.version>
     <com.io7m.quarrel.version>1.6.0</com.io7m.quarrel.version>
     <io7m.api.previousVersion>0.0.1</io7m.api.previousVersion>
     <io7m.java.targetJavaVersion>21</io7m.java.targetJavaVersion>
