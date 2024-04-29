@@ -11,12 +11,12 @@
     <version>8.2.0</version>
   </parent>
 
-  <groupId>com.io7m.idstore.trafficgen</groupId>
-  <artifactId>com.io7m.idstore.idstore_trafficgen</artifactId>
+  <groupId>com.io7m.idstore_trafficgen</groupId>
+  <artifactId>com.io7m.idstore_trafficgen</artifactId>
   <version>0.0.1</version>
   <packaging>jar</packaging>
 
-  <name>com.io7m.idstore.idstore_trafficgen</name>
+  <name>com.io7m.idstore_trafficgen</name>
   <description>Idstore Traffic Generator</description>
   <url>https://www.io7m.com/software/idstore</url>
 
@@ -30,14 +30,14 @@
   <licenses>
     <license>
       <name>ISC</name>
-      <url>https://io7m.com/license/isc.txt</url>
+      <url>https://www.io7m.com/license/isc.txt</url>
     </license>
   </licenses>
 
   <scm>
-    <url>https://github.com/io7m/idstore_trafficgen</url>
-    <connection>scm:git:https://github.com/io7m/idstore_trafficgen</connection>
-    <developerConnection>scm:git:https://github.com/io7m/idstore_trafficgen</developerConnection>
+    <url>https://www.github.com/io7m-com/idstore_trafficgen</url>
+    <connection>scm:git:https://www.github.com/io7m-com/idstore_trafficgen</connection>
+    <developerConnection>scm:git:https://www.github.com/io7m-com/idstore_trafficgen</developerConnection>
   </scm>
 
   <developers>
@@ -50,7 +50,7 @@
   </developers>
 
   <issueManagement>
-    <url>https://github.com/io7m/idstore_trafficgen/issues</url>
+    <url>https://www.github.com/io7m-com/idstore_trafficgen/issues</url>
     <system>GitHub Issues</system>
   </issueManagement>
 
@@ -72,7 +72,7 @@
 
   <ciManagement>
     <system>GitHub Actions</system>
-    <url>https://github.com/io7m/idstore_trafficgen/actions</url>
+    <url>https://www.github.com/io7m-com/idstore_trafficgen/actions</url>
   </ciManagement>
 
   <dependencies>
@@ -128,6 +128,16 @@
       <groupId>com.io7m.idstore</groupId>
       <artifactId>com.io7m.idstore.protocol.user</artifactId>
       <version>${com.io7m.idstore.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.io7m.hibiscus</groupId>
+      <artifactId>com.io7m.hibiscus.api</artifactId>
+      <version>0.0.8</version>
+    </dependency>
+    <dependency>
+      <groupId>io.opentelemetry</groupId>
+      <artifactId>opentelemetry-api</artifactId>
+      <version>1.33.0</version>
     </dependency>
 
     <!-- CLI -->

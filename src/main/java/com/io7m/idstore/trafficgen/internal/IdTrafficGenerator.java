@@ -35,6 +35,7 @@ import com.io7m.idstore.user_client.api.IdUClientConfiguration;
 import com.io7m.idstore.user_client.api.IdUClientCredentials;
 import com.io7m.idstore.user_client.api.IdUClientException;
 import com.io7m.idstore.user_client.api.IdUClientSynchronousType;
+import io.opentelemetry.api.OpenTelemetry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -115,7 +116,7 @@ public final class IdTrafficGenerator implements IdTrafficGeneratorType
     final var adminConfig =
       new IdAClientConfiguration(Locale.ROOT);
     final var userConfig =
-      new IdUClientConfiguration(Locale.ROOT);
+      new IdUClientConfiguration(OpenTelemetry.noop(), Locale.ROOT);
 
     try (var adminClient = adminClients.openSynchronousClient(adminConfig)) {
       final var adminName = this.configuration.adminName().value();
