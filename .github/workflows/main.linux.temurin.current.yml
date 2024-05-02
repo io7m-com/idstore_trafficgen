@@ -23,4 +23,4 @@ jobs:
         if: always()
         with:
           name: test-logs
-          path: ./com.io7m.idstore.idstore_trafficgen.tests/target/surefire-reports
+          path: ./com.io7m.idstore_trafficgen.tests/target/surefire-reports
