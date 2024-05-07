@@ -16,3 +16,4 @@ traffic-users.conf
 traffic.conf
 .jqwik-database
 dependency-reduced-pom.xml
+pom.xml.versionsBackup
