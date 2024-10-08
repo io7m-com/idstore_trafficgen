@@ -132,7 +132,7 @@
     <dependency>
       <groupId>com.io7m.hibiscus</groupId>
       <artifactId>com.io7m.hibiscus.api</artifactId>
-      <version>0.0.8</version>
+      <version>1.0.0</version>
     </dependency>
     <dependency>
       <groupId>io.opentelemetry</groupId>
