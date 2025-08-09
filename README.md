@@ -15,7 +15,7 @@ idstore_trafficgen
 | OpenJDK (Temurin) Current | Windows | [![Build (OpenJDK (Temurin) Current, Windows)](https://img.shields.io/github/actions/workflow/status/io7m-com/idstore_trafficgen/main.windows.temurin.current.yml)](https://www.github.com/io7m-com/idstore_trafficgen/actions?query=workflow%3Amain.windows.temurin.current)|
 | OpenJDK (Temurin) LTS | Windows | [![Build (OpenJDK (Temurin) LTS, Windows)](https://img.shields.io/github/actions/workflow/status/io7m-com/idstore_trafficgen/main.windows.temurin.lts.yml)](https://www.github.com/io7m-com/idstore_trafficgen/actions?query=workflow%3Amain.windows.temurin.lts)|
 
-# idstore_trafficgen
+## idstore_trafficgen
 
 A traffic generator for the [idstore](https://www.io7m.com/software/idstore)
 server.
