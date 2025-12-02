@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
   <parent>
@@ -21,6 +19,8 @@
   <url>https://www.io7m.com/software/idstore</url>
 
   <properties>
+    <io7m.workID>9184346f-b8b1-35e2-b814-887180fe2ec4</io7m.workID>
+
     <com.io7m.idstore.version>1.2.1</com.io7m.idstore.version>
     <com.io7m.quarrel.version>1.8.0</com.io7m.quarrel.version>
     <io7m.api.previousVersion>0.0.1</io7m.api.previousVersion>
@@ -207,6 +207,8 @@
                     ${project.build.directory}/generated-sources/string-template/com/io7m/idstore/trafficgen/IdTGVersion.java
                   </target>
                   <properties>
+    <io7m.workID>9184346f-b8b1-35e2-b814-887180fe2ec4</io7m.workID>
+
                     <appVersion>${project.version}</appVersion>
                     <appBuild>${buildNumber}</appBuild>
                   </properties>
